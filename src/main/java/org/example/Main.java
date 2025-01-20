@@ -1,17 +1,20 @@
 package org.example;
 
+import java.io.Console;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
+        /*
        File FicheroNombre = new File("./Chaima.txt");
          if(!FicheroNombre.exists()){
             try {
@@ -27,7 +30,7 @@ public class Main {
         }else{
             System.out.println("Ya existe el fichero");
         }
-        /*
+
         //creo la carpeta
         //con rename tambien se puede hacer
         File carpeta1 = new File("./Carpeta_1");
@@ -41,18 +44,15 @@ public class Main {
         }   */
 
         //buscar de forma recursiva el fichero por su nombre
-
-       if (FicheroNombre.exists())
-       {
-           System.out.println(FicheroNombre.getPath());
-       }else{
-           System.out.println("No se encuentra");
-       }
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Introduce el nombre del fichero a buscar");
+        String fichero = leer.nextLine();
+       BuscarFichero(fichero);
 
     }
     //recurvidad en cola, ver q es
-    public static void BuscarFichero(){
-
+    public static void BuscarFichero(String fichero){
+        //buscar el fichero dentrp de cada
     }
 
 
